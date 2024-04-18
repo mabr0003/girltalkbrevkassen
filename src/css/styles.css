@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+:root {
+  --primary-background-color: #f7c7d9;
+  --accent-color: #fff5eb;
+  --headline-color: #273aaa;
+  --headline-shadow-color: #fc4d5c;
+  --text-color: #1d1d1b;
+  --second-headline-shadow-color: #d1ecef;
+}
+
+h1 {
+  color: var(--headline-color);
+}
+
+p {
+  color: var(--text-color);
+}
