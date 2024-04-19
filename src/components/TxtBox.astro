@@ -1,0 +1,28 @@
+---
+const {tekst, header} = Astro.props;
+---
+    <div class="txtbox">
+
+        <h1>{header}</h1>
+
+        <p>{tekst}</p>
+    </div>
+
+
+<style>
+
+    .txtbox{
+        background-color: rgb(255, 245, 235);
+        max-width: 360px;
+        margin-inline: auto;
+        border-radius: 1rem;
+    }
+    h1{
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    p{
+        margin: 1rem
+    }
+</style>
