@@ -1,0 +1,38 @@
+---
+const { question, option1, option2, option3 } = Astro.props;
+---
+
+<article>
+  <p>{question}</p>
+  <div class="options">
+    <div class="option">
+      {option1}
+      <div class="circle"></div>
+    </div>
+    <div class="option">
+      {option2}
+      <div class="circle"></div>
+    </div>
+    <div class="option">
+      {option3}
+      <div class="circle"></div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .circle {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .options {
+    display: flex;
+  }
+  .option {
+    display: flex;
+    padding: 2rem;
+  }
+</style>
