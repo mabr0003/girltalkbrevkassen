@@ -1,5 +1,5 @@
 ---
-const { question, option1, option2, option3 } = Astro.props;
+const { question, option1, option2, option3, answer } = Astro.props;
 ---
 
 <article>
@@ -18,21 +18,41 @@ const { question, option1, option2, option3 } = Astro.props;
       <div class="circle"></div>
     </div>
   </div>
+  <div class="answer">{answer}</div>
 </article>
 
 <style>
+
+article {
+    background-color: var( --accent-color);
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+    border-radius: 15px;
+    margin: auto;
+}
+
   .circle {
     border: 1px solid;
     border-radius: 50%;
     width: 20px;
     height: 20px;
+    margin-left: 0.5rem;
+
   }
 
   .options {
     display: flex;
+    justify-content: center;
+ 
   }
   .option {
     display: flex;
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem; 
+  }
+
+  .answer {
+    display: none;
+ padding: 1rem;
   }
 </style>
