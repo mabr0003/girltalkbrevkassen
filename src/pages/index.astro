@@ -1,5 +1,5 @@
 ---
-
+import Quiz from "../components/Quiz.astro";
 ---
 
 <html lang="en">
@@ -15,5 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <title>Astro</title>
   </head>
-  <body> </body>
+  <body>
+    <main>
+      <Quiz question="Spørgsmål" option1="1" option2="2" option3="3" />
+    </main>
+  </body>
 </html>
