@@ -1,0 +1,104 @@
+---
+const { question, optioncorrect, option2, option3, answercorrect, answerwrong } = Astro.props;
+---
+
+<article>
+  <p>{question}</p>
+  <div class="options">
+    <div class="option option1">
+      <p>{optioncorrect}</p>
+      <div class="circle circle1"></div>
+    </div>
+    <div class="option option2">
+      <p>{option2}</p>
+      <div class="circle circle2"></div>
+    </div>
+    <div class="option option3">
+      <p>{option3}</p>
+      <div class="circle circle3"></div>
+    </div>
+  </div>
+  <div class="answer_correct"><p>{answercorrect}</p></div>
+  <div class="answer_wrong"><p>{answerwrong}</p></div>
+</article>
+
+<style>
+
+article {
+    background-color: var( --accent-color);
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+  .circle {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem;
+
+  }
+
+  .options {
+    display: flex;
+    justify-content: center;
+ 
+  }
+  .option {
+    display: flex;
+    padding: 0 2rem; 
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+
+  .answer_correct {
+    display: none;
+ padding: 1rem;
+  }
+  .answer_wrong {
+    display: none;
+ padding: 1rem;
+  }
+</style>
+
+    <script>
+const option1 = document.querySelector(".option1");
+const option2 = document.querySelector(".option2");
+const option3 = document.querySelector(".option3");
+const answercorrect = document.querySelector(".answer_correct");
+const answerwrong = document.querySelector(".answer_wrong");
+const circle1 = document.querySelector(".circle1");
+const circle2 = document.querySelector(".circle2");
+const circle3 = document.querySelector(".circle3");
+
+
+option1.addEventListener("click", correctAnswer);
+option2.addEventListener("click", wrongAnswer);
+option3.addEventListener("click", wrongAnswer);
+option2.addEventListener("click", circleBlack1);
+option3.addEventListener("click", circleBlack2);
+
+function correctAnswer(){
+answercorrect.style.display = "block";
+circle1.style.backgroundColor ="#1d1d1b";
+option2.removeEventListener("click", wrongAnswer);
+option3.removeEventListener("click", wrongAnswer);
+option2.removeEventListener("click", circleBlack1);
+option3.removeEventListener("click", circleBlack2);
+}
+function wrongAnswer(){
+answerwrong.style.display = "block";
+option1.removeEventListener("click", correctAnswer);
+}
+
+function circleBlack1(){
+circle2.style.backgroundColor = "#1d1d1b";
+}
+
+function circleBlack2(){
+circle3.style.backgroundColor = "#1d1d1b";
+}
+  </script>
