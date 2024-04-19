@@ -1,0 +1,74 @@
+---
+const { header, quote } = Astro.props;
+---
+
+<article class="tease_box_h">
+  <h2>{header}</h2>
+  
+  <h3><span class="curly-quotes1">&ldquo;</span>{quote}<span class="curly-quotes2">&rdquo;</span></h3>
+  <div class="læs_historien">
+<p>Læs historien</p> <img class="img_tease"src="pil-removebg-preview 2.svg" alt="tryk">
+  </div>
+ 
+  
+</article>
+
+<style>
+  .tease_box_h {
+    background-color: #fff5eb;
+    padding: 20px 40px 20px 40px;
+    margin:40px;
+    width:300px;
+    border-radius:20px;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    
+  }
+  .img_tease{
+    width:30px;
+  }
+  h2, h3, p{
+    font-style:italic;
+    font-family: "Archivo", sans-serif;
+  }
+
+  .læs_historien{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  h2{
+    
+   transform: translate(61px, -32px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-shadow: #D1ECEF 3px 3px;
+    
+  }
+
+  h3{
+    font-size: 22px;
+    display: grid;
+    grid-row: 2 / span 3;
+    margin-top: -20px;
+     font-weight: lighter;
+  }
+
+  .curly-quotes1{
+    font-family:"Archivo", sans-serif;
+    font-weight: bold;
+    font-size: 37px;
+   
+  }
+  .curly-quotes2{
+    font-family:"Archivo", sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 37px;
+  }
+  
+</style>
