@@ -1,0 +1,26 @@
+---
+const {header, quote} = Astro.props;
+---
+
+
+<article>
+    <div class="tease_boks">
+        <h2>{header}</h2>
+        <h3>{quote}</h3>
+        <p>Læs historien</p>
+    </div>
+</article>
+
+<style>
+.tease_boks {
+    background-color: #FFF5EB;
+    padding: 40px;
+    margin: 40px;;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.tease_boks h3,h2,p {
+    font-style: italic;
+}
+</style>
