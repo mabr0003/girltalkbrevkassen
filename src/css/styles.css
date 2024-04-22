@@ -138,6 +138,11 @@ main {
   background-image: url("/baggrund_1.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
+}
+.duerikkealene {
+  background-image: url("/baggrund_2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
