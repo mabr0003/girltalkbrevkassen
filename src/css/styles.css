@@ -51,6 +51,7 @@ p {
 
 .hero {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .hero img {
@@ -82,6 +83,7 @@ p {
 .h2_detsketebareikke {
   text-shadow: 3px 3px 4px #fc4d5c;
   text-align: center;
+  margin-top: 100px;
 }
 
 .harduenhistorie {
