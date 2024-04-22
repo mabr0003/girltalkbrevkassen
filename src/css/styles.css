@@ -135,5 +135,8 @@ p {
 }
 
 .detsketebareikke {
-  background-image: url("baggrund 1");
+  background-image: url("/baggrund_1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
