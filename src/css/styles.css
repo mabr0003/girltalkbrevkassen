@@ -49,6 +49,14 @@ p {
   font-family: "Archivo", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .hero {
   display: flex;
 }
@@ -180,9 +188,20 @@ main {
   position: relative;
 }
 
-.fixed {
+/* .fixed {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+
+/* SCROLL ANIMATIONER */
+
+.scroll_animation {
+  opacity: 0;
+  transition: 1.2s;
+}
+
+.fade_in {
+  opacity: 1;
 }
