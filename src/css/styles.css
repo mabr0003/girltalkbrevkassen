@@ -29,14 +29,12 @@ h1 {
   font-family: "obviously", sans-serif;
   font-weight: 900;
   font-style: normal;
-  font-size: 40px;
 }
 
 h2 {
   color: var(--headline-color);
   font-family: "obviously", sans-serif;
   font-weight: 700;
-  font-size: 30px;
   white-space: nowrap;
 }
 
@@ -58,19 +56,20 @@ p {
 }
 
 .hero img {
-  width: 100px;
+  width: 50px;
   height: auto;
 }
 
 .girltalk_illustration {
-  width: 60%;
+  width: 200px;
   margin-left: 1rem;
 }
 
 .girls {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 5rem;
 }
 
 .girl {
@@ -80,7 +79,7 @@ p {
 
 .girly {
   width: 70%;
-  grid-area: 2 / 3 / 4 / 5;
+  grid-area: 2 / 2 / 4 / 3;
 }
 .h2_detsketebareikke {
   text-shadow: 3px 3px 4px #fc4d5c;
@@ -140,4 +139,5 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-attachment: fixed;
 }
