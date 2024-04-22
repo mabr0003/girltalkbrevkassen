@@ -134,3 +134,7 @@ main {
   align-items: center;
   width: 100%;
 }
+
+.detsketebareikke {
+  background-image: url("baggrund 1");
+}
