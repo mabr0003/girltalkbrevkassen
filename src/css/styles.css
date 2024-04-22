@@ -35,19 +35,17 @@ h2 {
   color: var(--headline-color);
   font-family: "obviously", sans-serif;
   font-weight: 700;
-  white-space: nowrap;
 }
 
 h3 {
   color: var(--headline-shadow-color);
   font-family: "obviously", sans-serif;
   font-weight: 700;
-  font-size: 25px;
 }
 
 p {
   color: var(--text-color);
-  font-size: 20px;
+
   font-family: "Archivo", sans-serif;
 }
 
@@ -101,7 +99,6 @@ p {
   margin: 2rem auto;
 }
 .knap p {
-  font-size: 20px;
   font-weight: bold;
   font-weight: 800;
   text-align: center;
@@ -132,17 +129,60 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.txtbox {
+  background-color: rgb(255, 245, 235);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 500px;
+}
+
+.txtbox h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.quiz {
+  margin-bottom: 10rem;
 }
 
 .detsketebareikke {
   background-image: url("/baggrund_1.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   background-attachment: fixed;
 }
 .duerikkealene {
   background-image: url("/baggrund_2.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   background-attachment: fixed;
+}
+.historier {
+  background-image: url("/baggrund_3.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section_header {
+  margin-bottom: 7rem;
+}
+
+.scrollbox {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
