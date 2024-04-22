@@ -18,7 +18,7 @@ import Quiz from "../components/Quiz.astro";
     <title>Astro</title>
   </head>
   <body>
-    <main>
+    <main class="grid">
       <div class="hero">
         <h1>BREVKASSEN</h1>
         <img src="/public/hjerte.svg" alt="svg" />
@@ -45,24 +45,28 @@ import Quiz from "../components/Quiz.astro";
         <h2 class="h2_detsketebareikke">DU ER IKKE ALENE</h2>
       </section>
 
-      <section class="historier scrollbox"></section>
+      <section class="historier scrollbox">
+        <h1>historier</h1>
+      </section>
 
-      <h2 class="harduenhistorie">HAR DU EN HISTORIE?</h2>
-      <h3 class="senddentilos">SEND DEN TIL OS!</h3>
+      <section class="scrollbox">
+        <h2 class="harduenhistorie">HAR DU EN HISTORIE?</h2>
+        <h3 class="senddentilos">SEND DEN TIL OS!</h3>
 
-      <div class="knap">
-        <p>KLIK HER</p>
-      </div>
+        <div class="knap">
+          <p>KLIK HER</p>
+        </div>
 
-      <div class="chat_img">
-        <img src="/public/toserne.png" alt="toserne" />
-      </div>
-      <h2 class="chatmedos">CHAT MED OS</h2>
-      <p class="chat_tekst">GirlTalks chatrådgivning er for dig mellem 12 og 24 år. Du kan chatte med vores ungerådgivere hver aften eller sende en sms til os hele døgnet. Du er altid anonym og kan trygt dele dine tanker med os. Vi glæder os til at skrive med dig</p>
+        <div class="chat_img">
+          <img src="/public/toserne.png" alt="toserne" />
+        </div>
+        <h2 class="chatmedos">CHAT MED OS</h2>
+        <p class="chat_tekst">GirlTalks chatrådgivning er for dig mellem 12 og 24 år. Du kan chatte med vores ungerådgivere hver aften eller sende en sms til os hele døgnet. Du er altid anonym og kan trygt dele dine tanker med os. Vi glæder os til at skrive med dig</p>
 
-      <div class="knap">
-        <p>CHAT</p>
-      </div>
+        <div class="knap">
+          <p>CHAT</p>
+        </div>
+      </section>
     </main>
 
     <script>
@@ -71,11 +75,22 @@ import Quiz from "../components/Quiz.astro";
       window.addEventListener("scroll", animation);
 
       function animation() {
-        console.log(triggerBottom);
-
         const triggerBottom = window.innerHeight;
 
-        scrollbox.forEach((box) => {});
+        scrollbox.forEach((box) => {
+          const boxTop = box.getBoundingClientRect().top;
+          const boxBottom = box.getBoundingClientRect().bottom;
+          const boxHeight = box.getBoundingClientRect().height;
+          console.log({ box, boxTop });
+
+          if (boxTop < triggerBottom && boxTop > -boxHeight) {
+            //tilføj class til fade in
+            console.log("animation start");
+          }
+          if (boxBottom < 100 || boxTop > triggerBottom) {
+            console.log("animation fjern");
+          }
+        });
       }
     </script>
   </body>
