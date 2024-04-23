@@ -200,18 +200,49 @@ main {
 #scroll_to_top {
   display: none;
   position: fixed;
-  top: 90%;
-  left: 60%;
-  background-color: black;
+  top: 81%;
+  left: 90%;
+  background-color: white;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
+  border-radius: 10px;
+  padding: 5px 5px;
   cursor: pointer;
   font-size: 16px;
-  font-family: "Lato", sans-serif;
-  opacity: 0.2;
+  font-family: "Archivo", sans-serif;
   z-index: 2000;
+  opacity: 0.8;
+}
+
+.pil_op {
+  width: 27px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 800px) {
+  #scroll_to_top {
+    display: none;
+    position: fixed;
+    top: 81%;
+    left: 86%;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Archivo", sans-serif;
+    z-index: 2000;
+    opacity: 0.8;
+  }
+
+  .pil_op {
+    width: 44px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
 }
 
 /* SCROLL ANIMATIONER */
