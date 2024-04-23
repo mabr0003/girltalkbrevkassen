@@ -259,6 +259,8 @@ import Quiz from "../components/Quiz.astro";
           <p>CHAT</p>
         </div>
       </section>
+
+      <button id="scroll_to_top">Gå til toppen af siden</button>
     </main>
 
     <script>
@@ -301,13 +303,34 @@ import Quiz from "../components/Quiz.astro";
             console.log("animation fjern");
           }
         });
-        // const scrollTop = document.documentElement.scrollTop;
+
         // const sectionHeader = document.querySelectorAll(".section_header");
+
         // sectionHeader.forEach((header) => {
-        //   if (scrollTop < 0) {
+        //   const headerTop = sectionHeader.getBoundingClientRect().top;
+        //   const scrollTop = document.documentElement.scrollTop;
+
+        //   if (headerTop < scrollTop) {
         //     header.classList.add("fixed");
         //   }
         // });
+      }
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.documentElement.scrollTop > 30) {
+          document.querySelector("#scroll_to_top").style.display = "block";
+        } else {
+          document.querySelector("#scroll_to_top").style.display = "none";
+        }
+      }
+
+      document.querySelector("#scroll_to_top").addEventListener("click", scrollToTop);
+      function scrollToTop() {
+        document.documentElement.scrollTop = 0;
       }
     </script>
   </body>
