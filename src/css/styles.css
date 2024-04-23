@@ -262,8 +262,6 @@ main {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate;
-  margin-bottom: 5rem;
-  margin-top: 2rem;
 }
 
 @keyframes pulse_kf {
